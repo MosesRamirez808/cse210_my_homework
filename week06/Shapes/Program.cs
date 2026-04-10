@@ -1,9 +1,19 @@
-using System;
+using Shapes;
 
-class Program
+
+List<Shape> shapes = new List<Shape>();
+
+
+shapes.Add(new Square("Red", 5));
+shapes.Add(new Rectangle("Blue", 4, 8));
+shapes.Add(new Circle("Green", 3));
+
+
+foreach (Shape s in shapes)
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello World! This is the Shapes Project.");
-    }
+    
+    string color = s.GetColor();
+    double area = s.GetArea();
+
+    Console.WriteLine($"The {color} shape has an area of {area:0.00}.");
 }
