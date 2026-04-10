@@ -19,6 +19,5 @@ public abstract class Shape
         _color = color;
     }
 
-    // This method has no body because "Shape" doesn't have a formula.
-    public abstract double GetArea();
+        public abstract double GetArea();
 }
