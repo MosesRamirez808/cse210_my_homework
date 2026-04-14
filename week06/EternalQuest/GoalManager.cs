@@ -93,7 +93,7 @@ public class GoalManager
     Console.Write("Which goal did you accomplish? ");
     string input = Console.ReadLine();
 
-    // This checks if the input is a number and if it's within the list range
+    
     if (int.TryParse(input, out int goalNumber) && goalNumber > 0 && goalNumber <= _goals.Count)
     {
         int index = goalNumber - 1;
