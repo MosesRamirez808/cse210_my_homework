@@ -13,8 +13,14 @@ public abstract class Goal
         _points = points;
     }
 
-    public abstract void RecordEvent();
+    public abstract int RecordEvent(); // Changed to return int for the score
     public abstract bool IsComplete();
-    public virtual string GetDetailsString() => "";
+    
+    public virtual string GetDetailsString()
+    {
+        string statusSymbol = IsComplete() ? "[X]" : "[ ]";
+        return $"{statusSymbol} {_shortName} ({_description})";
+    }
+
     public abstract string GetStringRepresentation();
 }

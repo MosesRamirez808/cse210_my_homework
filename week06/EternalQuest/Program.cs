@@ -1,4 +1,11 @@
+using System;
 using EternalQuest;
 
-GoalManager manager = new GoalManager();
-manager.Start();
+class Program
+{
+    static void Main(string[] args)
+    {
+        GoalManager manager = new GoalManager();
+        manager.Start();
+    }
+}
